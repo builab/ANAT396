@@ -1,0 +1,26 @@
+table{
+  width: 800px;
+
+}
+
+th{
+  text-align: left;
+  background-color: thistle;
+}
+
+table, th, td{
+  border:2px solid black;
+  /*green color #007000*/
+  border-collapse: collapse;
+}
+
+ th, td{
+  padding: 5px;
+}
+tr:nth-child(even){
+  background-color: rgba(173, 173, 173, 0.986);
+}
+tr:nth-child(odd){
+  background-color: whitesmoke;
+}
+
