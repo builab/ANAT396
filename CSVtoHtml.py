@@ -22,9 +22,13 @@ with open('DisplayData.html', 'w') as htmlFile, open("CompiledData.csv", "r") as
    
     #for row in data:
         #print(row)
-    
-    Table = ["<body>\n", "<table>\n<thead>\n<tr>\n"]
-    htmlFile.writelines(Table)
+    Body = ["<body>\n",
+            "<div class=\"search-app\">\n",
+            "<h1>Search Proteins</h1>",
+            "<div id=\"search\"></div>\n",
+            "<table id=\"protein_information\">\n<thead>\n<tr>\n"]
+
+    htmlFile.writelines(Body)
         
     dataDict = csv.DictReader(dataFile)
 
@@ -44,12 +48,14 @@ with open('DisplayData.html', 'w') as htmlFile, open("CompiledData.csv", "r") as
             htmlFile.write("</tr>\n")      
         line=line+1
 
-    htmlFile.write("</tbody>\n</table>\n</body>\n</html>")
-    
-    
-        
-    
-
+    Closing = ["</tbody>\n",
+               "</table>\n<",
+               "</div>\n",
+               "<script src=\"script.js\"></script>\n",
+               "</body>\n",
+               "</html>"
+               ]
+    htmlFile.writelines(Closing)
     
     
     htmlFile.close()

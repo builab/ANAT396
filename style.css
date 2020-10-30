@@ -1,26 +1,43 @@
 table{
   width: 800px;
-
+  font-family: sans-serif;
+  padding: 15px;
+  margin: auto;
 }
 
 th{
   text-align: left;
-  background-color: thistle;
+  background-color: cadetblue;
 }
 
 table, th, td{
   border:2px solid black;
-  /*green color #007000*/
   border-collapse: collapse;
 }
 
  th, td{
   padding: 5px;
 }
+
 tr:nth-child(even){
   background-color: rgba(173, 173, 173, 0.986);
 }
 tr:nth-child(odd){
   background-color: whitesmoke;
+}
+
+input {
+  padding: 5px;
+  width: 500px;
+  margin-bottom: 25px;
+  outline: black;
+  outline-style: auto ;
+}
+
+.search-app {
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+  color: black;
 }
 
