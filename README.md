@@ -11,7 +11,9 @@ The code requires that the list of Uniprot protein IDs is in a CSV file, where e
 **How to run it**
 
 1.Run ProcessingProteins.py
+
 2.Run CSVtoHtml.py
+
 3.Open DisplayData.html is a browser
 
 
