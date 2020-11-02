@@ -14,7 +14,7 @@ The code requires that the list of Uniprot protein IDs is in a CSV file, where e
 
 2.Run CSVtoHtml.py
 
-3.Open DisplayData.html is a browser
+3.Open DisplayData.html in a browser
 
 
 
