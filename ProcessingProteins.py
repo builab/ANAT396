@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 
 with open('CompiledData.csv', 'w', newline='') as csvfile:
     
-    fieldnames = ['Protein_Name', 'Uniprot_ID', 'Gene_Name', 'InterPro', 'OrthoDB', 'Amino_Acids_Number']
+    fieldnames = ['Protein_Name', 'UniProt_ID', 'Gene_Name', 'InterPro', 'OrthoDB', 'Amino_Acids_Number']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
             
@@ -75,10 +75,9 @@ with open('CompiledData.csv', 'w', newline='') as csvfile:
             NumAAs = seq.attrib['length']  #hold the number of amino acids 
             
             
-            print(accession)
             ''' Writing to CSV file'''
             InterProString = X = " ".join(InterPro)
-            writer.writerow({'Protein_Name': ProteinName, 'Uniprot_ID': accession, 'Gene_Name' : GeneName, 'InterPro' : InterProString, 'OrthoDB' : OrthoDB, 'Amino_Acids_Number' : NumAAs })
+            writer.writerow({'Protein_Name': ProteinName, 'UniProt_ID': accession, 'Gene_Name' : GeneName, 'InterPro' : InterProString, 'OrthoDB' : OrthoDB, 'Amino_Acids_Number' : NumAAs })
                         
     file.close()
 csvfile.close()
