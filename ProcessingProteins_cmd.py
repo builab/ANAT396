@@ -16,7 +16,8 @@ if __name__=='__main__':
 	parser = argparse.ArgumentParser(description='Automatic grep information of Uniprot ID')
 	parser.add_argument('--i', '-input', help='Input CSV file of Uniprot_ID',required=True)
 	parser.add_argument('--o', '-output', help='Output CSV file',required=True)
-
+	
+	args = parser.parse_args()
 
 	with open(args.i, 'w', newline='') as csvfile:
     
