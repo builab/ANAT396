@@ -59,7 +59,6 @@ if __name__=='__main__':
 				#Finding references to this protein or homologs of it in different databases/sites
 				for x in proteinData[0].findall('{http://uniprot.org/uniprot}dbReference'):
 		    			dbRef = x.attrib
-					
 					#checking InTerPro
 					if (dbRef['type'] == 'InterPro'):
 						InterPro.append(dbRef['id'])
