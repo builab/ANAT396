@@ -62,20 +62,18 @@ if __name__=='__main__':
 		
 					#checking InTerPro
 					if (dbRef['type'] == 'InterPro'):
-						InterPro.append(dbRef['id'])
-			
+						InterPro.append(dbRef['id'])			
 					#checking OrthoDB
-		    			elif (dbRef['type'] == 'OrthoDB'):
+					elif (dbRef['type'] == 'OrthoDB'):
 						OrthoDB = dbRef['id']
     
 				#Finding the gene name 
 				if proteinData[0].find('{http://uniprot.org/uniprot}gene'):
-		    			GeneName=proteinData[0].find('{http://uniprot.org/uniprot}gene').find('{http://uniprot.org/uniprot}name').text
+					GeneName=proteinData[0].find('{http://uniprot.org/uniprot}gene').find('{http://uniprot.org/uniprot}name').text
 				else:
-		    			GeneName = "N/A"
+					GeneName = "N/A"
     
     
-	  
 				#Finding the Number of amino acids
 				seq = proteinData[0].find('{http://uniprot.org/uniprot}sequence')
 				NumAAs = seq.attrib['length']  #hold the number of amino acids 
