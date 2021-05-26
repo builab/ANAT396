@@ -27,7 +27,7 @@ if __name__=='__main__':
 		with open(args.o) as file:
 			Proteins = csv.reader(file, delimiter=',')
 			line = 0
-	 	 	for Protein in Proteins: 
+			for Protein in Proteins: 
 				#Get retreive XML from Uniprot
 				url = 'https://www.uniprot.org/uniprot/' + Protein[0] +'.xml'
 				r = requests.get(url)
