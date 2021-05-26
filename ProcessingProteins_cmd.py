@@ -61,7 +61,7 @@ if __name__=='__main__':
 		    			dbRef = x.attrib
 		
 					#checking InTerPro
-		    			if (dbRef['type'] == 'InterPro'):
+					if (dbRef['type'] == 'InterPro'):
 						InterPro.append(dbRef['id'])
 			
 					#checking OrthoDB
