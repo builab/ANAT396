@@ -59,26 +59,24 @@ if __name__=='__main__':
 				#Finding references to this protein or homologs of it in different databases/sites
 				for x in proteinData[0].findall('{http://uniprot.org/uniprot}dbReference'):
 		    			dbRef = x.attrib
-		
+					
 					#checking InTerPro
 					if (dbRef['type'] == 'InterPro'):
-						InterPro.append(dbRef['id'])			
+						InterPro.append(dbRef['id'])
 					#checking OrthoDB
 					elif (dbRef['type'] == 'OrthoDB'):
 						OrthoDB = dbRef['id']
-    
+						
 				#Finding the gene name 
 				if proteinData[0].find('{http://uniprot.org/uniprot}gene'):
 					GeneName=proteinData[0].find('{http://uniprot.org/uniprot}gene').find('{http://uniprot.org/uniprot}name').text
 				else:
 					GeneName = "N/A"
-    
-    
+				
 				#Finding the Number of amino acids
 				seq = proteinData[0].find('{http://uniprot.org/uniprot}sequence')
 				NumAAs = seq.attrib['length']  #hold the number of amino acids 
-		
-		
+			
 				''' Writing to CSV file'''
 				InterProString = X = " ".join(InterPro)
 				writer.writerow({'Protein_Name': ProteinName, 'UniProt_ID': accession, 'Gene_Name' : GeneName, 'InterPro' : InterProString, 'OrthoDB' : OrthoDB, 'Amino_Acids_Number' : NumAAs })
