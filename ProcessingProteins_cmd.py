@@ -13,7 +13,7 @@ import xml.etree.ElementTree as ET
 
 if __name__=='__main__':
 
-	parser = argparse.ArgumentParser(description='Plot coordinate of star file')
+	parser = argparse.ArgumentParser(description='Automatic grep information of Uniprot ID')
 	parser.add_argument('--i', '-input', help='Input CSV file of Uniprot_ID',required=True)
 	parser.add_argument('--o', '-output', help='Output CSV file',required=True)
 
