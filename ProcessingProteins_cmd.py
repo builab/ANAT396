@@ -66,13 +66,13 @@ if __name__=='__main__':
 			
 					#checking OrthoDB
 		    			elif (dbRef['type'] == 'OrthoDB'):
-			  			OrthoDB = dbRef['id']
+						OrthoDB = dbRef['id']
     
 				#Finding the gene name 
 				if proteinData[0].find('{http://uniprot.org/uniprot}gene'):
-		    		GeneName=proteinData[0].find('{http://uniprot.org/uniprot}gene').find('{http://uniprot.org/uniprot}name').text
+		    			GeneName=proteinData[0].find('{http://uniprot.org/uniprot}gene').find('{http://uniprot.org/uniprot}name').text
 				else:
-		    		GeneName = "N/A"
+		    			GeneName = "N/A"
     
     
 	  
