@@ -19,13 +19,13 @@ if __name__=='__main__':
 	
 	args = parser.parse_args()
 
-	with open(args.i, 'w', newline='') as csvfile:
+	with open(args.o, 'w', newline='') as csvfile:
     
 		fieldnames = ['Protein_Name', 'UniProt_ID', 'Gene_Name', 'InterPro', 'OrthoDB', 'Amino_Acids_Number']
 		writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 		writer.writeheader()
 		
-		with open(args.o) as file:
+		with open(args.i, 'r') as file:
 			Proteins = csv.reader(file, delimiter=',')
 			line = 0
 			for Protein in Proteins: 
