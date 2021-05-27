@@ -1,4 +1,4 @@
-# ANAT396
+# Display MS data info
 
 **Goal of Project**
 
@@ -15,6 +15,23 @@ The code requires that the list of Uniprot protein IDs is in a CSV file, where e
 2.Run CSVtoHtml.py
 
 3.Open DisplayData.html in a browser
+
+# Command line version
+
+Get information from Fasta list
+
+'''python ProcessingProteins_cmd.py --i Proteins.csv --o CompiledData.csv'''
+
+Merge CSV file using a common Uniprot_ID field
+
+python MergingCSVFiles_cmd.py --i1 CompliedData.csv --i2 MS_data.csv --o MergedCSVFile.csv --field Uniprot_ID
+
+Convert CSV to Html
+
+python CSVtoHtml_cmd.py --i MergedCSVFile.csv --o DisplayData.html
+
+
+
 
 
 
