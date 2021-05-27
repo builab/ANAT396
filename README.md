@@ -20,15 +20,17 @@ The code requires that the list of Uniprot protein IDs is in a CSV file, where e
 
 Get information from Fasta list
 
-'''python ProcessingProteins_cmd.py --i Proteins.csv --o CompiledData.csv'''
+*python ProcessingProteins_cmd.py --i Proteins.csv --o CompiledData.csv*
 
 Merge CSV file using a common Uniprot_ID field
 
-python MergingCSVFiles_cmd.py --i1 CompliedData.csv --i2 MS_data.csv --o MergedCSVFile.csv --field Uniprot_ID
+*python MergingCSVFiles_cmd.py --i1 CompliedData.csv --i2 MS_data.csv --o MergedCSVFile.csv --field Uniprot_ID*
 
 Convert CSV to Html
 
-python CSVtoHtml_cmd.py --i MergedCSVFile.csv --o DisplayData.html
+*python CSVtoHtml_cmd.py --i MergedCSVFile.csv --o DisplayData.html*
+
+For proper search the html file needs to be in the same folder as the *style.css* and *script.js* file
 
 
 
